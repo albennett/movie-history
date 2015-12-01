@@ -11,9 +11,6 @@ body {
 	font-size: .9em;
 }
 
-#slidey-thing {
-	color: white;
-}
 /*
 Login/Sign up: splash page styling
 */
@@ -56,7 +53,36 @@ Login/Sign up: splash page styling
 
 }
 
+//slider
+.slider-handle.custom::before {
+line-height: 20px;
+font-size: 20px;
+content: '\2605'; /*unicode star character*/
+color: yellow;
+}
 
+#ex6SliderVal {
+	margin: 5px;
+	font-size: 15px;
+}
+
+#slidey-thing{
+	background-color: $primarycolor;
+	border: none;
+	// margin-left: 20px;
+	padding-right: 15px;
+	padding-left: 15px;
+	color: $primarycolor_light;
+	letter-spacing: 2px;
+	font-size: 14px;
+	border-left: 3px solid white;
+	height: 32px;
+
+	&:hover {
+		cursor: default;
+	}
+
+}
 
 
 /*
@@ -90,6 +116,9 @@ Navigation Styling
 	padding-left: 15px;
 	color: $primarycolor_light;
 	letter-spacing: 2px;
+	#slidey-thing {
+		color: white;
+	}
 }
 
 #logout-button {
