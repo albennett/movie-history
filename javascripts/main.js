@@ -22,30 +22,5 @@ require(
 function(_$_, centralHandling, Q, stars, slider) {
 
 
-$("#ex6").slider();
-$("#ex6").on("slide", function(slideEvt) {
-  $("#ex6SliderVal").text(slideEvt.value);
-
-    if (slideEvt.value === 0) {
-      $("div[watchtoggle='true']").show();
-      $("div[watchtoggle='false']").show();
-      $("#all-user-title").show();
-      $(".search-result").parent().show();
-      $("div[active='false']").hide();
-
-
-    } else {
-      $("div[watchtoggle='true']").hide();
-      $("div[watchtoggle='false']").hide();
-      $(".search-result").parent().hide();
-      $("#all-user-title").hide();
-      $("div[fave='"+slideEvt.value+"']").show();
-      $("div[active='false']").hide();
-
-
-    }
-
-});
-
 
 });
