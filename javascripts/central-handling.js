@@ -251,25 +251,30 @@ define(function(require) {
 
 
   // /////// Page Turning on user filtering. ///////
+  $("#ex6").slider();
 
   // See All Movies
   $(document).on("click", ".clickAll", function(e){
     userSearchValue = "";
     processedResults = null;
     $("#all-user-title").show();
+    $("#ex6").attr("data-slider-value", 0);
+    $("#ex6SliderVal").text(0);
+    $("#ex6").slider('refresh');
     beginWebApplication(auth, email, password);
   });
 
-function hideall(){
+  function hideall(){
     $("div[watchtoggle='true']").hide();
     $("div[watchtoggle='false']").hide();
     $("#all-user-title").hide();
     $(".search-result").parent().hide();
-}
+  }
   // See Watched Movies
   $(document).on("click", ".clickWatch", function(e){
     userSearchValue = "";
     hideall();
+    $("#ex6").slider('refresh');
     $("div[watchtoggle='true']").show();
     $("div[active='false']").hide();
   });
@@ -279,12 +284,12 @@ function hideall(){
     console.log("You clicked the UNWatched button at top");
     userSearchValue = "";
     hideall();
+    $("#ex6").slider('refresh');
     $("div[watchtoggle='false']").show();
     $("div[active='false']").hide();
   });
 
   // Filter movies using the slider based on the rating
-  $("#ex6").slider();
   $("#ex6").on("slide", function(slideEvt) {
     $("#ex6SliderVal").text(slideEvt.value);
 
