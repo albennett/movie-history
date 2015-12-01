@@ -275,6 +275,7 @@ define(function(require) {
     userSearchValue = "";
     hideall();
     $("#ex6").slider('refresh');
+    $("#ex6SliderVal").text(0);
     $("div[watchtoggle='true']").show();
     $("div[active='false']").hide();
   });
@@ -285,6 +286,7 @@ define(function(require) {
     userSearchValue = "";
     hideall();
     $("#ex6").slider('refresh');
+    $("#ex6SliderVal").text(0);
     $("div[watchtoggle='false']").show();
     $("div[active='false']").hide();
   });
