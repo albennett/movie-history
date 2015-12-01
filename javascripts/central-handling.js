@@ -278,17 +278,18 @@ define(function(require) {
 
   });
 
-  // See Favorited Movies
-  $(document).on("click", ".clickFave", function(e){
-    console.log("You clicked the Fave button at top");
-    $("div[watchtoggle='true']").hide();
-    $("div[watchtoggle='false']").hide();
-    $("div[fave='5']").show();
-    $("#all-user-title").hide();
-    $(".search-result").parent().hide();
-    // beginWebApplication(auth, email, password);
+// /////Delete once SliderEvent is working properly
+  // // See Favorited Movies
+  // $(document).on("click", ".clickFave", function(e){
+  //   console.log("You clicked the Fave button at top");
+  //   $("div[watchtoggle='true']").hide();
+  //   $("div[watchtoggle='false']").hide();
+  //   $("div[fave='5']").show();
+  //   $("#all-user-title").hide();
+  //   $(".search-result").parent().hide();
+  //   // beginWebApplication(auth, email, password);
 
-  });
+  // });
 
 
 
