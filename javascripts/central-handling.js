@@ -21,6 +21,7 @@ define(function(require) {
 
     var auth;
     var myFirebaseRef = new Firebase("https://ama-moviehistory.firebaseio.com/");
+    var firebaseConnection;
     var email, password;
     var signup = false;
     var userSearchValue;
@@ -113,8 +114,7 @@ define(function(require) {
     // Puts results to DOM, according to which user loads
     function beginWebApplication(thisUserAuth, email, password) {
 
-      var fireurl = "https://ama-moviehistory.firebaseio.com/all-users-libraries/user_library_" + thisUserAuth +"/";
-      var firebaseConnection = new Firebase(fireurl);
+
       firebaseConnection.on("value", function(snapshot) {
         userMovieLibrary = snapshot.val();
 
@@ -151,6 +151,8 @@ define(function(require) {
         .then(function(authConfirmNumber) {
           auth = authConfirmNumber.uid;
           changePageOnAuth();
+          var fireurl = "https://ama-moviehistory.firebaseio.com/all-users-libraries/user_library_" + auth +"/";
+          firebaseConnection = new Firebase(fireurl);
           beginWebApplication(auth, email, password); // sends to main page functionality
         })
         .fail(function(error) {
@@ -169,6 +171,8 @@ define(function(require) {
         .then(function(authData) {
           auth = authData.uid;
           changePageOnAuth();
+          var fireurl = "https://ama-moviehistory.firebaseio.com/all-users-libraries/user_library_" + auth +"/";
+          firebaseConnection = new Firebase(fireurl);
           loginUniqueUser(myFirebaseRef, auth, email, password); // checks user against existing ones
           beginWebApplication(auth, email, password); // sends to main page functionality
         })
