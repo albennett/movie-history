@@ -292,11 +292,12 @@ define(function(require) {
   });
 
   // Filter movies using the slider based on the rating
-  $("#ex6").on("slide", function(slideEvt) {
-    $("#ex6SliderVal").text(slideEvt.value);
+  $("#ex6").on("change", function(slideEvt) {
+
+    $("#ex6SliderVal").text(slideEvt.value.newValue);
 
     // If it's on zero, no effect on filters/search results
-    if (slideEvt.value === 0) {
+    if (slideEvt.value.newValue === 0) {
       $("div[watchtoggle='true']").show();
       $("div[watchtoggle='false']").show();
       $("#all-user-title").show();
@@ -304,7 +305,7 @@ define(function(require) {
       $("div[active='false']").hide();
     } else {
       hideall();
-      $("div[fave='"+slideEvt.value+"']").show(); //Otherwise it takes the slider value and gets the attributes with matching ratings
+      $("div[fave='"+slideEvt.value.newValue+"']").show(); //Otherwise it takes the slider value and gets the attributes with matching ratings
       $("div[active='false']").hide();
     }
 
