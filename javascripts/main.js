@@ -31,7 +31,6 @@ $("#ex6").on("slide", function(slideEvt) {
       $("div[watchtoggle='false']").show();
       $("#all-user-title").show();
       $(".search-result").parent().show();
-
     } else {
       $("div[watchtoggle='true']").hide();
       $("div[watchtoggle='false']").hide();

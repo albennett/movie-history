@@ -252,6 +252,11 @@ define(function(require) {
     userSearchValue = "";
     processedResults = null;
     $("#all-user-title").show();
+
+      $("div[watchtoggle='true']").show();
+      $("div[watchtoggle='false']").show();
+      $(".search-result").parent().show();
+
     beginWebApplication(auth, email, password);
   });
 
@@ -265,7 +270,6 @@ define(function(require) {
     // beginWebApplication(auth, email, password);
   });
 
-//////// Good ////////
   // See UnWatched Movies
   $(document).on("click", ".clickUnwatch", function(e){
     console.log("You clicked the UNWatched button at top");
