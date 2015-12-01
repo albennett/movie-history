@@ -8,8 +8,8 @@
   <title>Movie History</title>
 	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/lib/bower_components/bootstrap-star-rating/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link href="./lib/bower_components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 
 <body>
@@ -80,10 +80,11 @@
 
 	<div class="row">
 			<div id="filters" class="btn-group col-xs-8 col-sm-10 col-sm-offset-1 col-xs-offset-2" role="group" aria-label="...">
-			  <button type="button" class="btn btn-default clickAll">All</button>
+			  <<button type="button" class="btn btn-default clickAll">All</button>
 			  <button type="button" class="btn btn-default clickWatch">Watched</button>
 			  <button type="button" class="btn btn-default clickUnwatch">Unwatched</button>
-			  <button type="button" class="btn btn-default clickFave">Favorites</button>
+			  <input id="ex6" type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="3">
+			  <span id="ex6CurrentSliderValLabel">Current Slider Value: <span id="ex6SliderVal">3</span></span>
 			</div> <!-- holds main page where results load -->
 	</div>
 	<div class="row">

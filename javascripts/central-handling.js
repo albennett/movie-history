@@ -13,6 +13,8 @@ define(function(require) {
   var addModal = require("add-modal");
   var eachMyMoviesTemplate = require("hbs!../templates/each_my_movies");
   var eachMovieTemplate = require("hbs!../templates/each_movie");
+  var sliderFilter = require("sliderfilter");
+  var slider = require("slider");
     
     $(".page").hide(); // on page load, everything is hidden
 
@@ -34,6 +36,11 @@ define(function(require) {
       $("#entry-screen").hide();
       $('#password').val("");
     }
+
+    $("#ex6").slider();
+      $("#ex6").on("slide", function(slideEvt) {
+        $("#ex6SliderVal").text(slideEvt.value);
+      });
 
     // Applies handlebar template and stars plugin
     function loadMoviesToPage (library) {
@@ -73,6 +80,7 @@ define(function(require) {
         }
       }
     } // Closes function loadMoviesToPage
+
 
     function searchUsSomeResults(searchForThis, userMovieLibrary) {
 
