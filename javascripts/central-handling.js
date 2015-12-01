@@ -255,41 +255,28 @@ define(function(require) {
     beginWebApplication(auth, email, password);
   });
 
-  // See Watched Movies
-  $(document).on("click", ".clickWatch", function(e){
-    userSearchValue = "";
-    $("div[watchtoggle='true']").show();
+function hideall(){
+    $("div[watchtoggle='true']").hide();
     $("div[watchtoggle='false']").hide();
     $("#all-user-title").hide();
     $(".search-result").parent().hide();
-    // beginWebApplication(auth, email, password);
+}
+  // See Watched Movies
+  $(document).on("click", ".clickWatch", function(e){
+    userSearchValue = "";
+    hideall();
+    $("div[watchtoggle='true']").show();
+    $("div[active='false']").hide();
   });
 
-//////// Good ////////
   // See UnWatched Movies
   $(document).on("click", ".clickUnwatch", function(e){
     console.log("You clicked the UNWatched button at top");
     userSearchValue = "";
-    $("div[watchtoggle='true']").hide();
+    hideall();
     $("div[watchtoggle='false']").show();
-    $("#all-user-title").hide();
-    $(".search-result").parent().hide();
-    // beginWebApplication(auth, email, password);
-
+    $("div[active='false']").hide();
   });
-
-// /////Delete once SliderEvent is working properly
-  // // See Favorited Movies
-  // $(document).on("click", ".clickFave", function(e){
-  //   console.log("You clicked the Fave button at top");
-  //   $("div[watchtoggle='true']").hide();
-  //   $("div[watchtoggle='false']").hide();
-  //   $("div[fave='5']").show();
-  //   $("#all-user-title").hide();
-  //   $(".search-result").parent().hide();
-  //   // beginWebApplication(auth, email, password);
-
-  // });
 
 
 

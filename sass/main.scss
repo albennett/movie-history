@@ -213,14 +213,11 @@ Movie poster styling
 	font-size: 1.8em;
 }
 
-// //This is to try and hide any buttons for movies already Watched { Noice! - Andri }
-// button[Watched="true"] {
-//   display: none;
-// }
 
-// div[Watched="false"] {
-//   display: none;
-// }
+// Hides movies always that have ever been deleted
+div[Active="false"] {
+  display: none;
+}
 
 //Buttons originally broke at 590px
 @media screen and (max-width: 767px) {

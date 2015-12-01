@@ -31,6 +31,8 @@ $("#ex6").on("slide", function(slideEvt) {
       $("div[watchtoggle='false']").show();
       $("#all-user-title").show();
       $(".search-result").parent().show();
+      $("div[active='false']").hide();
+
 
     } else {
       $("div[watchtoggle='true']").hide();
@@ -38,6 +40,8 @@ $("#ex6").on("slide", function(slideEvt) {
       $(".search-result").parent().hide();
       $("#all-user-title").hide();
       $("div[fave='"+slideEvt.value+"']").show();
+      $("div[active='false']").hide();
+
 
     }
 
