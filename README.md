@@ -22,7 +22,34 @@ Movie History is created by Amy Lee Bennett, Mathew Ostrander, and Andri Alexand
 *Please view [our Trello board](https://trello.com/b/APqiIaV4/movie-history) for development progress and good places to jump in.*
 
 Need to Install: 
-Jquery, Handlebars, Lodash, HandleBars, Q, Bootstrap, Firebase, Bootstrap, Stars (bootstrap plugin)
+Jquery, Handlebars, Lodash, HandleBars, Q, Bootstrap, Firebase, Bootstrap, Stars (bootstrap plugin), seiyria-bootstrap-slider
+
+[To install slider](https://github.com/seiyria/bootstrap-slider)
+`bower install seiyria-bootstrap-slider`
+Make sure this is linked in index.html
+`<link rel="stylesheet" type="text/css" href="lib/bower_components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.min.css">
+`
+and require config file includes
+```
+require.config({
+  baseUrl: './javascripts',
+  paths: {
+    'jquery': '../lib/bower_components/jquery/dist/jquery.min',
+    'lodash': '../lib/bower_components/lodash/lodash.min',
+    'hbs': '../lib/bower_components/require-handlebars-plugin/hbs',
+    'q': '../lib/bower_components/q/q',
+    'bootstrap': '../lib/bower_components/bootstrap/dist/js/bootstrap.min',
+    'firebase': '../lib/bower_components/firebase/firebase',
+    'stars': '../lib/bower_components/bootstrap-star-rating/js/star-rating.min',
+    'slider': '../lib/bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.min'
+  },
+  shim: {
+    'bootstrap': ['jquery'],
+    'stars': ['bootstrap'],
+    'slider' : ['bootstrap']
+  }
+});
+```
 
 Javascript files:
 central-handling : Our central spot for all of our event handlers
