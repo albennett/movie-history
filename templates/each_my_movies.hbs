@@ -17,7 +17,7 @@
 		<button id="{{imdbID}}" title="{{Title}}" class="movie-add btn btn-default pull-right">Add</button>
 		<button class="movie-watch btn btn-default pull-right" id="{{imdbID}}" watched="{{watched}}" title="{{Title}}" key="{{@key}}">Watch</button>
 		<div id="{{imdbID}}" class="stars pull-right" watched="{{watched}}">
-			<input id="{{@key}}" title="{{Title}}" class="rating" data-min="0" data-max="5" data-step="1" data-show-clear="false" data-show-caption="false" data-size="xs" value="{{rating}}">
+			<input id="{{@key}}" title="{{Title}}" class="rating" data-min="0" data-max="10" data-stars=10 data-step="1" data-show-clear="false" data-show-caption="false" data-size="xs" value="{{rating}}">
 		</div>
 	</div>
 </div>
