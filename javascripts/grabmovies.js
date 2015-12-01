@@ -6,8 +6,9 @@ return {
     	console.log("moviedata", moviedata);
       var thisUserLibrary = new Firebase("https://ama-moviehistory.firebaseio.com/all-users-libraries/user_library_" + userID);
       var userMovieInLibrary = thisUserLibrary.child(moviedata.Title);
-      moviedata.rating = 0;
-      moviedata.watched = false;
+      moviedata.Rating = 0;
+      moviedata.Watched = false;
+      moviedata.Active = true;
 
       userMovieInLibrary.set(moviedata);
       }
