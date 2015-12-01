@@ -52,7 +52,7 @@ define(function(require) {
       for (var eachMovie in library) {
         if (library[eachMovie].Poster === "N/A") {
           $(".pull-right[imdb=" + library[eachMovie].imdbID + "]").hide();
-          console.log("RAWR", $("#" + library[eachMovie].imdbID + "yo"));
+
           $("#" + library[eachMovie].imdbID + "yo").show();
         }
       }
