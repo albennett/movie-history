@@ -1,5 +1,5 @@
 {{#each this}}
-<div class="col-sm-3 col-xs-12 poster-display-unit" key="{{imdbID}}" watchtoggle="{{watched}}" fave="{{rating}}">
+<div class="col-sm-3 col-xs-12 poster-display-unit" key="{{imdbID}}" watchtoggle="{{Watched}}" fave="{{rating}}" active="{{Active}}">
 	<div id="{{imdbID}}" title="{{Title}}" class="delete-button x-background">
 		<a href="#">
 			<span key="{{@key}}" title="{{Title}}">&times;</span>
@@ -15,9 +15,9 @@
 
 	<div class="poster-controls">
 		<button id="{{imdbID}}" title="{{Title}}" class="movie-add btn btn-default pull-right">Add</button>
-		<button class="movie-watch btn btn-default pull-right" id="{{imdbID}}" watched="{{watched}}" title="{{Title}}" key="{{@key}}">Watch</button>
-		<div id="{{imdbID}}" class="stars pull-right" watched="{{watched}}">
-			<input id="{{@key}}" title="{{Title}}" class="rating" data-min="0" data-max="10" data-stars=10 data-step="1" data-show-clear="false" data-show-caption="false" data-size="xs" value="{{rating}}">
+		<button class="movie-watch btn btn-default pull-right" id="{{imdbID}}" watched="{{Watched}}" title="{{Title}}" key="{{@key}}">Watch</button>
+		<div id="{{imdbID}}" class="stars pull-right" watched="{{Watched}}">
+			<input id="{{@key}}" title="{{Title}}" class="rating" data-min="0" data-max="10" data-stars=10 data-step="1" data-show-clear="false" data-show-caption="false" data-size="xs" value="{{Rating}}">
 		</div>
 	</div>
 </div>

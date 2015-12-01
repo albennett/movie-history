@@ -5,7 +5,7 @@ define(function(require) {
   function rateMovie(movieKey, userAuth, stars) {
 
     var newRating = {
-      "rating": stars
+      "Rating": stars
     };
 
     $.ajax({
@@ -22,7 +22,7 @@ define(function(require) {
   function watchMovie(movieKey, userAuth) {
 
     var watch = {
-      "watched": true 
+      "Watched": true 
     };
 
     $.ajax({
@@ -31,7 +31,7 @@ define(function(require) {
       data: JSON.stringify(watch)
 		})
     .done(function(info) {
-      console.log("AJAX watched patch", info);
+      console.log("AJAX Watched patch", info);
     });
 
   }
