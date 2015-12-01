@@ -58,11 +58,11 @@ define(function(require) {
 
       // Processes what 'Watch State' movie is in, and presents user with relevant buttons
       for (var thisMovie in library) {
-        if (library[thisMovie].watched === false) {
+        if (library[thisMovie].Watched === false) {
           $("#" + library[thisMovie].imdbID + ".delete-button").show();
           $("#" + library[thisMovie].imdbID + ".movie-watch").show();
         }
-        else if (library[thisMovie].watched === true) {
+        else if (library[thisMovie].Watched === true) {
           $("#" + library[thisMovie].imdbID + ".movie-watch").hide();
           $("#" + library[thisMovie].imdbID + ".delete-button").show();
           $("#" + library[thisMovie].imdbID + ".stars").show();
@@ -255,9 +255,9 @@ define(function(require) {
   });
 
 //////// Good ////////
-  // See Unwatched Movies
+  // See UnWatched Movies
   $(document).on("click", ".clickUnwatch", function(e){
-    console.log("You clicked the UNWATCHED button at top");
+    console.log("You clicked the UNWatched button at top");
     userSearchValue = "";
     $("div[watchtoggle='true']").hide();
     $("div[watchtoggle='false']").show();

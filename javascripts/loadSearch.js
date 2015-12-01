@@ -23,7 +23,7 @@ define(["dependencies", "stars", "grabmovies", "q"],
         return deferred.promise;
     }
 
-        // Adds data from just this particular movie to user's library of movies, not yet functioning
+    // Adds data from just this particular movie to user's library of movies, not yet functioning
     function clickToAdd(e) {
       var thisMovieImdbId = e.target.id; // grabs movie in search results from id on add button
       // var thisMovieImdbId = allResults[thisMovieId].imdbID; // grabs proper movie information given correct id

@@ -13,7 +13,7 @@ Movie History is created by Amy Lee Bennett, Mathew Ostrander, and Andri Alexand
    1. Year released
    1. An array of major actors
    1. An integer rating of 1-5
-   1. A boolean value that, if true, means that you have watched the movie
+   1. A boolean value that, if true, means that you have Watched the movie
 1. You must be using Grunt to automate Javascript testing
 1. You must be using Grunt to automate SASS compilation
 
@@ -41,10 +41,10 @@ create-user-in-private-firebase : When you sign up, function createTheUser store
 loadSearch : Populates movies from omda api and inserts into handlebar template each_movie.hbs on search movies in nav through PopulateMovies function.
 With clickToAdd function, movies populated through search are then stored into firebase when add button is clicked. Function addSearchModal has a modal appear when searched movies are clicked on. Modal includes title of movie, year, and actors. 
 
-grabMovies : Stores movies added by user in firebase under user key. Adds rating key set to 0, and watched key set to false.
+grabMovies : Stores movies added by user in firebase under user key. Adds rating key set to 0, and Watched key set to false.
 
 user-library: Allows the users library of movies to be populated or used in other modules.
 
-movie-change: function rateMovie users stars plugin to store change of rating through ajax Patch method. Function watchMovie changes watch key in firebase through Patch Method when watched on main page gets clicked.
+movie-change: function rateMovie users stars plugin to store change of rating through ajax Patch method. Function watchMovie changes watch key in firebase through Patch Method when Watched on main page gets clicked.
 
 delete-movie: Creates promise of ajax delete method to delete whole key in firebase & page. 

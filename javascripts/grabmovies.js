@@ -11,7 +11,7 @@ return {
       moviedata.Active = true;
 
       userMovieInLibrary.set(moviedata);
-      }
+    }
         
     };
 });
