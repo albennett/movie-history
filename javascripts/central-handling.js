@@ -60,10 +60,6 @@ define(function(require) {
       // Testing if movie is Active = false, and hiding forever
 
       for (var movieIndex in library) {
-        // var thisMovieId = library[movieIndex].imdbID;
-        // console.log("thisMovieId", thisMovieId);
-        // var thisMovieDiv = $("[key=" + thisMovieId + "]");
-        // console.log("thisMovieDiv", thisMovieDiv.child);
         $("div[active='false']").hide();
 
       }
