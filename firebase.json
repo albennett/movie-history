@@ -1,0 +1,9 @@
+{
+  "firebase": "ama-moviehistory",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
