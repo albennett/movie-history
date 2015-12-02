@@ -1,6 +1,6 @@
 {
   "firebase": "ama-moviehistory",
-  "public": "public",
+  "public": ".",
   "ignore": [
     "firebase.json",
     "**/.*",
